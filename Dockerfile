@@ -3,7 +3,7 @@ MAINTAINER ZF Master <office@zfmaster.com>
 
 # install git and git-ftp
 RUN apt-get -y update 
-RUN apt-get -y install git git-ftp libssh-dev build-essential libssh2-1-dev wget ansible
+RUN apt-get -y install git git-ftp libssh-dev build-essential libssh2-1-dev wget ansible rsync
 RUN apt-get clean
 WORKDIR /opt 
 RUN ls
