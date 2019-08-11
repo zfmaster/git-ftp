@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER ZF Master <office@zfmaster.com>
 
-ENV TZ=Europe/Viena
+ENV TZ=Europe/Vienna
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # install git and git-ftp
