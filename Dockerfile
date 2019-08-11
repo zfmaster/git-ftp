@@ -6,7 +6,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # install git and git-ftp
 RUN apt-get -y update 
-# RUN apt-get -y install git git-ftp libssh-dev build-essential libssh2-1-dev wget ansible rsync unzip openjdk-8-jdk ant software-properties-common ca-certificates-java npm git
+RUN apt-get -y install git git-ftp libssh-dev build-essential libssh2-1-dev wget ansible rsync unzip openjdk-8-jdk ant software-properties-common ca-certificates-java npm git
 
 RUN apt-get clean
 RUN update-ca-certificates -f
