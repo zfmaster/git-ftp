@@ -11,7 +11,7 @@ RUN apt-get -y install git git-ftp libssh-dev build-essential libssh2-1-dev wget
 RUN apt-get clean
 RUN update-ca-certificates -f
 
-RUN apt-get y install nodejs npm 
+RUN apt-get -y install nodejs npm 
 
 RUN add-apt-repository ppa:ondrej/php -y
 RUN apt-get y install php5.6-cli
