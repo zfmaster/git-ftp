@@ -6,13 +6,16 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # install git and git-ftp
 RUN apt-get -y update 
-RUN apt-get -y install git git-ftp libssh-dev build-essential libssh2-1-dev wget ansible rsync unzip openjdk-8-jdk ant software-properties-common ca-certificates-java nodejs npm git
+RUN apt-get -y install git git-ftp libssh-dev build-essential libssh2-1-dev wget ansible rsync unzip openjdk-8-jdk ant software-properties-common ca-certificates-java git
 
 RUN apt-get clean
 RUN update-ca-certificates -f
 
-RUN add-apt-repository ppa:ondrej/php -y
+RUN apt-get y install nodejs npm 
 
+RUN add-apt-repository ppa:ondrej/php -y
+RUN apt-get y install php5.6-cli
+RUN apt-get clean
 
 # Setup JAVA_HOME -- useful for docker commandline
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
