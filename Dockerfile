@@ -14,7 +14,7 @@ RUN update-ca-certificates -f
 RUN apt-get -y install nodejs npm 
 
 RUN add-apt-repository ppa:ondrej/php -y
-RUN apt-get y install php5.6-cli
+RUN apt-get -y install php5.6-cli
 RUN apt-get clean
 
 # Setup JAVA_HOME -- useful for docker commandline
